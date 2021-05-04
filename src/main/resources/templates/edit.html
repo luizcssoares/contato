@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edit contato</title>
+</head>
+<body>
+  <h1>Edit contato</h1>
+  <form th:action="@{/contato/save}" th:object="${contato}" method="POST">
+   <table border="0" cellpadding="10">
+    <tr>             
+       <td><label for="id">Id:</label></td>
+       <td><input type="text" th:field="*{id}" name="id" readonly="readonly" /></td>
+    </tr>
+    <tr>    
+       <td><label for="id">Cpf</label></td>
+       <td><input type="text" name="cpf" th:field="*{cpf}" size="20" /></td>
+    </tr>
+    <tr>
+       <td><label for="nome">Nome:</label></td> 
+       <td><input type="text" name="nome" th:field="*{nome}" size="40" /></td>
+    </tr>
+    <tr>
+       <td><label for="fone">Fone:</label></td> 
+       <td><input type="text" name="fone" th:field="*{fone}" size="20" /></td>
+    </tr>
+    <tr>
+       <td><label for="email">Email:</label> 
+       <td><input type="text" name="email" th:field="*{email}" size="40" /></td>
+    </tr>
+    <tr>   
+       <td><label for="email">Data:</label></td> 
+       <td><input type="text" name="data" th:field="*{data}" size="20" /></td>
+    </tr> 
+    <tr>      
+       <td colspan="2"><button type="submit">Salvar</button></td>
+    </tr>   
+  </form>
+</body>
+</html>
